@@ -11,14 +11,15 @@ let firstNum = readline.question();
 console.log("enter the second number");
 let secondNum = readline.question();
 console.log("what operation would you perform? select a number:\n1) add 2) multiply 3) subtract 4) divide");
+let result;
 let input = readline.question();
 if (input === '1') {
-  input = Number(firstNum) + Number(secondNum);
+  result = Number(firstNum) + Number(secondNum);
 } else if (input === '2') {
-  input = Number(firstNum) * Number(secondNum);
+  result = Number(firstNum) * Number(secondNum);
 } else if (input === '3') {
-  input = Number(firstNum) - Number(secondNum);
+  result = Number(firstNum) - Number(secondNum);
 } else {
-  input = Number(firstNum) / Number(secondNum);
+  result = Number(firstNum) / Number(secondNum);
 }
-console.log(`the result is ${input}`);
+console.log(`the result is ${result}`);
