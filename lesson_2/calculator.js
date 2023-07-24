@@ -4,16 +4,19 @@
 // Perform the operation on the two numbers.
 // Print the result to the terminal.
 
-prompt("Welcome to the calculator");
-let readline = require('readline-sync');
-
 function prompt(msg) {
   console.log(`=> ${msg}`);
 }
+
+prompt("Welcome to the calculator");
+let readline = require('readline-sync');
+
 prompt("enter the first number");
 let firstNum = readline.question();
+
 prompt("enter the second number");
 let secondNum = readline.question();
+
 prompt("what operation would you perform? select a number:\n1) add 2) multiply 3) subtract 4) divide");
 let operation = readline.question();
 
