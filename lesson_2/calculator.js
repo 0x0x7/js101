@@ -4,22 +4,27 @@
 // Perform the operation on the two numbers.
 // Print the result to the terminal.
 
-console.log("Welcome to GHAATOL calculator");
+prompt("Welcome to the calculator");
 let readline = require('readline-sync');
-console.log("enter the first number");
+
+function prompt(msg) {
+  console.log(`=> ${msg}`);
+}
+prompt("enter the first number");
 let firstNum = readline.question();
-console.log("enter the second number");
+prompt("enter the second number");
 let secondNum = readline.question();
-console.log("what operation would you perform? select a number:\n1) add 2) multiply 3) subtract 4) divide");
+prompt("what operation would you perform? select a number:\n1) add 2) multiply 3) subtract 4) divide");
+let operation = readline.question();
+
 let result;
-let input = readline.question();
-if (input === '1') {
+if (operation === '1') {
   result = Number(firstNum) + Number(secondNum);
-} else if (input === '2') {
+} else if (operation === '2') {
   result = Number(firstNum) * Number(secondNum);
-} else if (input === '3') {
+} else if (operation === '3') {
   result = Number(firstNum) - Number(secondNum);
 } else {
   result = Number(firstNum) / Number(secondNum);
 }
-console.log(`the result is ${result}`);
+prompt(`the result is ${result}`);
