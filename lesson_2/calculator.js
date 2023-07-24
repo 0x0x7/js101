@@ -8,14 +8,28 @@ function prompt(msg) {
   console.log(`=> ${msg}`);
 }
 
+function invalidNumber(number) {
+  return number.trimStart() === '' || Number.isNaN(Number(number));
+}
+
 prompt("Welcome to the calculator");
 let readline = require('readline-sync');
 
 prompt("enter the first number");
 let firstNum = readline.question();
 
+while (invalidNumber(firstNum)) {
+  prompt("Please enter a valid number");
+  firstNum = readline.question();
+}
+
 prompt("enter the second number");
 let secondNum = readline.question();
+
+while (invalidNumber(secondNum)) {
+  prompt("Please enter a valid number");
+  secondNum = readline.question();
+}
 
 prompt("what operation would you perform? select a number:\n1) add 2) multiply 3) subtract 4) divide");
 let operation = readline.question();
