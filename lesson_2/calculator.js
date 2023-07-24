@@ -21,13 +21,18 @@ prompt("what operation would you perform? select a number:\n1) add 2) multiply 3
 let operation = readline.question();
 
 let result;
-if (operation === '1') {
-  result = Number(firstNum) + Number(secondNum);
-} else if (operation === '2') {
-  result = Number(firstNum) * Number(secondNum);
-} else if (operation === '3') {
-  result = Number(firstNum) - Number(secondNum);
-} else {
-  result = Number(firstNum) / Number(secondNum);
+switch (operation) {
+  case '1':
+    result = Number(firstNum) + Number(secondNum);
+    break;
+  case '2':
+    result = Number(firstNum) * Number(secondNum);
+    break;
+  case '3':
+    result = Number(firstNum) - Number(secondNum);
+    break;
+  case '4':
+    result = Number(firstNum) / Number(secondNum);
+    break;
 }
 prompt(`the result is ${result}`);
