@@ -62,7 +62,8 @@ while (true) {
       result = Number(firstNum) / Number(secondNum);
       break;
   }
-  prompt(messages('result'), LANGUAGE);
+  console.log(messages('result', LANGUAGE) + " " + result);
+
   prompt(messages('newCalculation'), LANGUAGE);
   let answer = readline.question();
 
