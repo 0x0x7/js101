@@ -4,6 +4,9 @@
 // Perform the operation on the two numbers.
 // Print the result to the terminal.
 
+const MESSAGES = require('./calculator_messages.json');
+
+
 function prompt(msg) {
   console.log(`=> ${msg}`);
 }
@@ -12,27 +15,27 @@ function invalidNumber(number) {
   return number.trimStart() === '' || Number.isNaN(Number(number));
 }
 
-prompt("Welcome to the calculator");
+prompt(MESSAGES['welcome']);
 let readline = require('readline-sync');
 
 while (true) {
-  prompt("enter the first number");
+  prompt(MESSAGES['firstNum']);
   let firstNum = readline.question();
 
   while (invalidNumber(firstNum)) {
-    prompt("Please enter a valid number");
+    prompt(MESSAGES['validNum']);
     firstNum = readline.question();
   }
 
-  prompt("enter the second number");
+  prompt(MESSAGES['secondNum']);
   let secondNum = readline.question();
 
   while (invalidNumber(secondNum)) {
-    prompt("Please enter a valid number");
+    prompt(MESSAGES['validNum']);
     secondNum = readline.question();
   }
 
-  prompt("what operation would you perform? select a number:\n1) add 2) multiply 3) subtract 4) divide");
+  prompt(MESSAGES['operation']);
   let operation = readline.question();
 
   while (!['1', '2', '3', '4'].includes(operation)) {
@@ -56,7 +59,7 @@ while (true) {
       break;
   }
   prompt(`the result is ${result}`);
-  prompt('Would you like to perform another operation? (y/n)');
+  prompt(MESSAGES['newCalculation']);
   let answer = readline.question();
 
   if (answer !== 'y') break;
