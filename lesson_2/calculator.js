@@ -34,6 +34,11 @@ while (invalidNumber(secondNum)) {
 prompt("what operation would you perform? select a number:\n1) add 2) multiply 3) subtract 4) divide");
 let operation = readline.question();
 
+while (!['1', '2', '3', '4'].includes(operation)) {
+  prompt('Enter 1, 2, 3 or 4');
+  operation = readline.question();
+}
+
 let result;
 switch (operation) {
   case '1':
