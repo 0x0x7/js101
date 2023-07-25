@@ -1,8 +1,20 @@
 {
-  "welcome": "Welcome to Calculator!",
-  "validNum": "Please enter a valid number.",
-  "firstNum": "enter the first number",
-  "secondNum": "enter the second number",
-  "operation": "what operation would you perform? select a number:\n1) add 2) multiply 3) subtract 4) divide",
-  "newCalculation": "Would you like to perform another operation? (y/n)"
+  "en": {
+    "welcome": "Welcome to Calculator!",
+    "validNum": "Please enter a valid number.",
+    "firstNum": "enter the first number",
+    "secondNum": "enter the second number",
+    "operation": "what operation would you perform? select a number:\n1) add 2) multiply 3) subtract 4) divide",
+    "choice": "Enter 1, 2, 3 or 4",
+    "result": "the result is",
+    "newCalculation": "Would you like to perform another operation? (y/n)"
+  },
+  "it": {
+    "welcome": "ciao a tutti",
+    "validNum": "entratra giuto number",
+    "firstNum": "entrata numero uno",
+    "secondNum": "entrata numbero due",
+    "operation": "quale operazio",
+    "newCalculation": "altre calculazione? entra y per si oppure n per no. grazie"
+  }
 }
