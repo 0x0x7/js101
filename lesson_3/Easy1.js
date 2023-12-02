@@ -47,3 +47,25 @@ let ages = { Herman: 32, Lily: 30, Grandpa: 402, Eddie: 10 };
 // property of the ages object or not.
 
 console.log(ages.hasOwnProperty('Spot')); // false
+
+/*
+** Using the following string, create a new string that contains all lowercase
+** letters except for the first character, which should be capitalized.
+*/
+
+let munstersDescription = "the Munsters are CREEPY and Spooky.";
+// => The munsters are creepy and spooky.
+
+/*
+** We can use method chaining to first retrieve the first character of the string
+** using charAt() and make it uppercase using toUpperCase(). We use the + operator
+** to concatenate the first character with the rest of the string where substring(1)
+** gives us the rest of the characters starting from index 1 to the end turned to
+** lower case using toLowerCase():
+*/
+
+let munstersDescription = "the Munsters are CREEPY and Spooky.";
+let x = munstersDescription.charAt(0).toUpperCase() +
+  munstersDescription.substring(1).toLowerCase();
+
+console.log(x); // The munsters are creepy and spooky.
