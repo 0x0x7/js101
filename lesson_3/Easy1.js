@@ -69,3 +69,21 @@ let x = munstersDescription.charAt(0).toUpperCase() +
   munstersDescription.substring(1).toLowerCase();
 
 console.log(x); // The munsters are creepy and spooky.
+
+/* Questions 5:
+** What will the following code output?
+*/
+```js
+console.log(false == '0');
+console.log(false === '0');
+```
+
+/* The non strict equality operator (==) coerces the values to the same time before
+** comparing them. The strict equality operator (===) evaluates as true when the two
+** expressions on either side have the same type and value.
+*/
+
+```js
+console.log(false == '0'); // true
+console.log(false === '0'); // false
+```
