@@ -100,3 +100,4 @@ let additionalAges = { Marilyn: 22, Spot: 237 };
 // We can use Object.assign() method to copy additionalAges object properties to ages object:
 
 console.log(Object.assign(ages, additionalAges));
+// { Herman: 32, Lily: 30, Grandpa: 5843, Eddie: 10, Marilyn: 22, Spot: 237 }
