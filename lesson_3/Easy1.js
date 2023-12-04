@@ -110,3 +110,18 @@ let str2 = "Fred and Wilma have a pet dinosaur named Dino.";
 
 console.log(str1.includes('Dino')) // false
 console.log(str2.includes('Dino')) // true
+
+// Question 8: How can we add the family pet, "Dino", to the following array?
+
+let flintstones = ["Fred", "Barney", "Wilma", "Betty", "Bambam", "Pebbles"];
+
+// To do additional elements to an array, we use push() method:
+
+flintstones.push("Dino"); // ["Fred", "Barney", "Wilma", "Betty", "Bambam", "Pebbles", "Dino"]
+
+// The push() method will mutate the array in place, and return the mutated array.
+// Another alternative is the concat() method:
+
+flintstones.concat("Dino"); // ["Fred", "Barney", "Wilma", "Betty", "Bambam", "Pebbles", "Dino"]
+
+// The concat() method doesn't mutate the original array, and return a copy of the updated array.
