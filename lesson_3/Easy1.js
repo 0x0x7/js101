@@ -125,3 +125,5 @@ flintstones.push("Dino"); // ["Fred", "Barney", "Wilma", "Betty", "Bambam", "Peb
 flintstones.concat("Dino"); // ["Fred", "Barney", "Wilma", "Betty", "Bambam", "Pebbles", "Dino"]
 
 // The concat() method doesn't mutate the original array, and return a copy of the updated array.
+
+// Question 9:
