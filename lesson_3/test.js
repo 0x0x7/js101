@@ -1,2 +1,3 @@
-let str2 = "Fred and Wilma have a pet dinosaur named Dino.";
-console.log(str2.includes("dino")); // true
+let advice =
+  "Few things in life are as important as house training your pet dinosaur.";
+console.log(advice.slice(0, advice.indexOf("house")));
