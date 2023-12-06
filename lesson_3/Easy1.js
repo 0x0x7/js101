@@ -126,4 +126,13 @@ flintstones.concat("Dino"); // ["Fred", "Barney", "Wilma", "Betty", "Bambam", "P
 
 // The concat() method doesn't mutate the original array, and return a copy of the updated array.
 
-// Question 9:
+// Question 9: In the previous problem, our first answer added 'Dino' to the array like this:
+
+let flintstones = ["Fred", "Barney", "Wilma", "Betty", "Bambam", "Pebbles"];
+flintstones.push("Dino");
+
+// How can we add multiple items to our array? ('Dino' and 'Hoppy'). Here's how:
+
+flintstones.push("Dino", "Hoppy");
+
+// Question 10:
