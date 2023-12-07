@@ -1,4 +1,5 @@
-let advice =
-  "Few things in life are as important as house training your pet dinosaur.";
+let x = "I've asked Rahman to read a lot of books";
+let result = x.replace(/ books.*/, "");
 
-console.log(advice.replace("important", "urgent"));
+console.log(result);
+// Output: "I've asked Rahman to read"
