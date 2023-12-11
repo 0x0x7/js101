@@ -59,3 +59,12 @@ let famousWords = "seven years ago...";
 
 console.log(famousWords + "Four score and "); // 'seven years ago...Four score and '
 console.log(famousWords.concat("Four score and ")); // 'seven years ago...Four score and '
+
+// Question 5: Given an array of numbers [1, 2, 3, 4, 5], mutate the array by removing
+// the number at index 2, so that the array becomes [1, 2, 4, 5].
+
+// Solution:
+
+let x = [1, 2, 3, 4, 5];
+x.splice(2, 1);
+console.log(x); // [1, 2, 4, 5]
