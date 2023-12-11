@@ -48,3 +48,14 @@ let number2 = 95; // true
 
 console.log(numbers.includes(8)); // false
 console.log(numbers.includes(4)); // true
+
+// Question 4: Starting with the string:
+
+let famousWords = "seven years ago...";
+
+// show two different ways to put the expected "Four score and " in front of it.
+
+// Solution:
+
+console.log(famousWords + "Four score and "); // 'seven years ago...Four score and '
+console.log(famousWords.concat("Four score and ")); // 'seven years ago...Four score and '
