@@ -88,4 +88,15 @@ flintstones.push(["Bambam", "Pebbles"]);
 
 // Solution:
 
-// Using concat() is one way to do this:
+//1. We can use concat() with the spread operator to flatten an array that's only one level nested:
+
+```js
+let flintstones = ["Fred", "Wilma", ["Barney", "Betty"], ["Bambam", "Pebbles"]];
+let flattenedArray = [].concat(...flintoses);
+console.log(flattenedArray);
+```
+// [ 'Fred', 'Wilma', 'Barney', 'Betty', 'Bambam', 'Pebbles' ]
+
+//2. Using the forEach() method:
+
+//3. Using the flat() method:
