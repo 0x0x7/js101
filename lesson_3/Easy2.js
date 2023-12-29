@@ -110,3 +110,15 @@ let flintstones = { Fred: 0, Wilma: 1, Barney: 2, Betty: 3, Bambam: 4, Pebbles: 
 ['Barney', 2]
 
 // Solution:
+Object.entries(flintstones).filter(check => check[0] === 'Barney').shift();
+
+// Question 8: How would you check whether the objects assigned to variables numbers and table below are arrays?
+
+let numbers = [1, 2, 3, 4]; // true
+let table = { field1: 1, field2: 2, field3: 3, field4: 4 }; // false
+
+// Solution:
+console.log(isArray(numbers)); // true
+console.log(isArray(table)); // false
+
+// Question 9:
