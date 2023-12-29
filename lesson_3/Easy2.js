@@ -39,15 +39,15 @@ console.log(numbers); // [1, 2, 3, 4, 5]
 
 // Question 3: Given a number and an array, determine whether the number is included in the array.
 
-let numbers = [1, 2, 3, 4, 5, 15, 16, 17, 95, 96, 99];
+let nums = [1, 2, 3, 4, 5, 15, 16, 17, 95, 96, 99];
 
 let number1 = 8;  // false
 let number2 = 95; // true
 
 // Solution:
 
-console.log(numbers.includes(8)); // false
-console.log(numbers.includes(4)); // true
+console.log(nums.includes(8)); // false
+console.log(nums.includes(4)); // true
 
 // Question 4: Starting with the string:
 
@@ -84,13 +84,13 @@ flintstones.push(["Bambam", "Pebbles"]);
 
 // Create a new array that contains all of the above values, but in an un-nested format:
 
-[ 'Fred', 'Wilma', 'Barney', 'Betty', 'Bambam', 'Pebbles' ]
+['Fred', 'Wilma', 'Barney', 'Betty', 'Bambam', 'Pebbles']
 
-// Solution:
+  // Solution:
 
-//1. We can use concat() with the spread operator to flatten an array that's only one level nested:
+  //1. We can use concat() with the spread operator to flatten an array that's only one level nested:
 
-```js
+  ```js
 let flintstones = ["Fred", "Wilma", ["Barney", "Betty"], ["Bambam", "Pebbles"]];
 let flattenedArray = [].concat(...flintoses);
 console.log(flattenedArray);
@@ -100,3 +100,13 @@ console.log(flattenedArray);
 //2. Using the forEach() method:
 
 //3. Using the flat() method:
+
+// Question 7: Consider the following object:
+
+let flintstones = { Fred: 0, Wilma: 1, Barney: 2, Betty: 3, Bambam: 4, Pebbles: 5 };
+
+// Create an array from this object that contains only two elements: Barney's name and Barney's number:
+
+['Barney', 2]
+
+// Solution:

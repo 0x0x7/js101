@@ -9,11 +9,3 @@
 //   }
 // });
 // console.log("The captains are:", captainsMeetup);
-
-let flintstones = ["Fred", "Wilma"];
-flintstones.push(["Barney", "Betty"]);
-flintstones.push(["Bambam", ["Pebbles"]]);
-
-let flattenedArray = [].concat(...flintstones);
-console.log(flattenedArray);
-// [ 'Fred', 'Wilma', 'Barney', 'Betty', 'Bambam', 'Pebbles' ]
