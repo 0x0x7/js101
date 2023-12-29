@@ -9,3 +9,7 @@
 //   }
 // });
 // console.log("The captains are:", captainsMeetup);
+
+let str = "348742315";
+let paddedStr = str.padStart(7);
+console.log(paddedStr);

@@ -121,4 +121,14 @@ let table = { field1: 1, field2: 2, field3: 3, field4: 4 }; // false
 console.log(isArray(numbers)); // true
 console.log(isArray(table)); // false
 
-// Question 9:
+// Question 9: Back in the stone age (before CSS), we used spaces to align things on the screen.
+// If we have a 40-character wide table of Flintstone family members, how can we center
+// the following title above the table with spaces?
+
+let title = "Flintstone Family Members";
+
+// Solution: First we determine the spaces by substracting length of the string from the given width:
+let padding = Math.floor((40 - title.length) / 2);
+
+// Then we use padStart():
+title.padStart(padding + title.length);
