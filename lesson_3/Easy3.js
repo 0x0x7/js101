@@ -16,3 +16,10 @@ numbers.splice(0, numbers.length); // This will start at index 0, and iterate th
 while (numbers.length > 0) {
   numbers.pop(); // Keep removing the elements until length is > 0
 }
+
+// Question 2: What will the following code output?
+
+console.log([1, 2, 3] + [4, 5]);
+
+// Solution: The code above will output [1, 2, 34, 5] because the + operator
+// coerces the arrays into a string before concatenating it.
