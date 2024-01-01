@@ -16,8 +16,8 @@ including descending. Both of these methods mutate the original array as
 shown below. Write two distinct ways of reversing the array without
 mutating the original array. Use reverse for the first solution,
 and sort for the second.
-*/
 
+```js
 let numbers = [1, 2, 3, 4, 5];
 numbers.reverse();
 console.log(numbers); // [ 5, 4, 3, 2, 1 ]
@@ -25,20 +25,25 @@ console.log(numbers); // [ 5, 4, 3, 2, 1 ]
 numbers = [1, 2, 3, 4, 5];
 numbers.sort((num1, num2) => num2 - num1);
 console.log(numbers); // [ 5, 4, 3, 2, 1 ]
+```
 
-// Solution:
-
+*Answer*
+```js
 let numbers = [1, 2, 3, 4, 5];
 console.log(numbers.slice().reverse()); // [5, 4, 3, 2, 1]
 console.log(numbers); // [1, 2, 3, 4, 5]
+```
 
-// Using the spread syntax to sort the array in descending order:
+Using the spread syntax to sort the array in descending order:
 
+```js
 let numbers = [1, 2, 3, 4, 5];
 console.log([...numbers].sort((num1, num2) => num2 - num1); // [5, 4, 3, 2, 1]
 console.log(numbers); // [1, 2, 3, 4, 5]
+```
 
-// Question 3: Given a number and an array, determine whether the number is included in the array.
+*Question 3*
+Given a number and an array, determine whether the number is included in the array.
 
 let nums = [1, 2, 3, 4, 5, 15, 16, 17, 95, 96, 99];
 
