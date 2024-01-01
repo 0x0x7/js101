@@ -10,6 +10,15 @@
 // });
 // console.log("The captains are:", captainsMeetup);
 
-let str = "348742315";
-let paddedStr = str.padStart(7);
-console.log(paddedStr);
+let a = 1;
+let b = 2;
+
+function foo(a) {
+  a = 3;
+  b = 4;
+  return a + b;
+}
+
+console.log(foo(b));
+console.log(a);
+console.log(b);
