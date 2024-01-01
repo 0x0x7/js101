@@ -1,14 +1,15 @@
-/* Question 1: Given a string, return a new string that replaces every
- ** occurrence of the word "important" with "urgent":
- */
+*Question 1*
+Given a string, return a new string that replaces every occurrence of the word "important" with "urgent":
 
+```js
 let advice =
   "Few things in life are as important as house training your pet dinosaur.";
+```
 
-// Solution:
+*Answer*
 advice.replace("important", "urgent");
 
-/* Question 2:
+*Question 2*
 The Array.prototype.reverse method reverses the order of elements in an array,
 and Array.prototype.sort can rearrange the elements in a variety of ways,
 including descending. Both of these methods mutate the original array as
