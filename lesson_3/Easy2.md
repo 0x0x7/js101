@@ -131,7 +131,7 @@ Create an array from this object that contains only two elements: Barney's name 
 
 ['Barney', 2]
 
-*Answer*
+*Answer 7*
 ```js
 Object.entries(flintstones).filter(check => check[0] === 'Barney').shift();
 ```
@@ -142,29 +142,44 @@ How would you check whether the objects assigned to variables numbers and table 
 let numbers = [1, 2, 3, 4]; // true
 let table = { field1: 1, field2: 2, field3: 3, field4: 4 }; // false
 
-// Solution:
+*Answer 8*
+```js
 console.log(isArray(numbers)); // true
 console.log(isArray(table)); // false
+```
 
-// Question 9: Back in the stone age (before CSS), we used spaces to align things on the screen.
-// If we have a 40-character wide table of Flintstone family members, how can we center
-// the following title above the table with spaces?
+*Question 9*
+Back in the stone age (before CSS), we used spaces to align things on the screen.
 
+If we have a 40-character wide table of Flintstone family members, how can we center the following title above the table with spaces?
+
+```js
 let title = "Flintstone Family Members";
+```
 
-// Solution: First we determine the spaces by substracting length of the string from the given width:
+*Answer 9*
+First we determine the spaces by substracting length of the string from the given width:
+
+```js
 let padding = Math.floor((40 - title.length) / 2);
+```
 
-// Then we use padStart():
+Then we use padStart():
+
+```js
 title.padStart(padding + title.length);
+```
 
-// Question 10: Write a one-line expression to count the number of lower-case t characters
-// in each of the following strings:
+*Question 10*
+Write a one-line expression to count the number of lower-case t characters in each of the following strings:
 
+```js
 let statement1 = "The Flintstones Rock!";
 let statement2 = "Easy come, easy go.";
+```
 
-// Solution:
-
+*Answer 10*
+```js
 statement1.split('').filter(char => char === 't').length;
 statement2.split('').filter(char => char === 't').length;
+```
