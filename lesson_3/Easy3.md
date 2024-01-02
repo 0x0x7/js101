@@ -79,3 +79,47 @@ function isColorValid(color) {
 Try to come up with at least two different solutions.
 
 *Answer 5*
+1. Returning the condition itself:
+
+```js
+function isColorValid(color) {
+    return color === "blue" || color === "green
+  }
+}
+```
+
+2. Using arrow functions
+```js
+let isColorValid = (color) => color === "blue" || color === "green"
+```
+
+3. Using includes() array method with arrow function:
+```js
+let isColorValid = (color) => ["blue", "green"].includes(color);
+```
+
+*Question 6*
+Examine the following code carefully. Can you identify all of the variables, primitive values, and objects that exist when this code executes?
+
+```js
+let arr = [1, 2, 3];
+let newArr = arr;
+
+const num = arr[0];
+let newNum = num;
+
+function double(num) {
+  return num * 2;
+}
+
+double(newNum);
+```
+
+*Answer 6*
+In the code snippet above, we have 9 primitive values, 2 objects, and 6 variables.
+
+Primitives: 1, 2, 3 as part of the arr array elements. 0, and 1 as part of the num variable. 1 in newNum variable, and 2 in the return statement. 1 in the newNum argument, and 2 as a result of the num * 2 expression.
+
+Variables: arr, newArr, num, newNum, double, and num as the parameter.
+
+Objects: arr array, and double function.
