@@ -1,3 +1,6 @@
-let munstersDescription = "The Munsters are creepy and spooky.";
+let x = [1, 2, 3, 4, 5];
 
-console.log(munstersDescription.split());
+let deleteElements = (numbers) => numbers * numbers;
+
+let emptyArray = x.map(deleteElements);
+console.log(emptyArray);
