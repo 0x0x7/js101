@@ -45,3 +45,14 @@ const x = munstersDescription.split("").map(function(character) {
 
 console.log(x);
 ```
+
+*Question 5*
+What will the following two lines of code output?
+
+```js
+console.log(0.3 + 0.6);
+console.log(0.3 + 0.6 === 0.9);
+```
+
+*Answer 5*
+The lines above demonstrates precision issues inhereted in binary representation of decimals in JavaScript that can lead to unexpected results like `0.89...` and `false` in this example.
