@@ -30,3 +30,18 @@ Return a new string that swaps the case of all of the letters:
 ```js
 `tHE mUNSTERS ARE CREEPY AND SPOOKY.`;
 ```
+
+*Answer 2*
+First we use the `split("")` method with empty strings turn each character of the string to an array element to make it easy to iterate on. Then we use the `map()` method, and declare an inline function as part of the parameter with an `if else` block that checks if the character is lowercase, it should return uppercase, or if it's uppercase, it should return lowercase. Finally we use the `join("")` method with empty strings to return the string.
+
+```js
+const x = munstersDescription.split("").map(function(character) {
+  if (character === character.toUpperCase) {
+    return character.toLowerCase();
+  } else {
+    return character.toUpperCase();
+  }
+}).join("");
+
+console.log(x);
+```
