@@ -17,3 +17,16 @@ for (let count = 0; count <= 9; count++) {
   console.log(" ".repeat(count) + "The Flintstones Rock!");
 }
 ```
+
+*Question 2*
+Starting with the string:
+
+```js
+let munstersDescription = "The Munsters are creepy and spooky.";
+```
+
+Return a new string that swaps the case of all of the letters:
+
+```js
+`tHE mUNSTERS ARE CREEPY AND SPOOKY.`;
+```
