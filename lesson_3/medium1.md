@@ -56,3 +56,21 @@ console.log(0.3 + 0.6 === 0.9);
 
 *Answer 5*
 The lines above demonstrates precision issues inhereted in binary representation of decimals in JavaScript that can lead to unexpected results like `0.89...` and `false` in this example.
+
+*Question 7*
+What is the output of the following code?
+
+```js
+let answer = 42;
+
+function messWithIt(someNumber) {
+  return (someNumber += 8);
+}
+
+let newAnswer = messWithIt(answer);
+
+console.log(answer - 8);
+```
+
+*Answer 7*
+The code above will output 34. The last line logs the global `answer` variable which is also used as argument for the `messWithIt` function, but since the value is primitive, it's passed by value e.g. the function receives a copy of it, and the original value remains unmutated.
