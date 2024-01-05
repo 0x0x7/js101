@@ -86,6 +86,24 @@ console.log(0.3 + 0.6 === 0.9);
 The lines above demonstrates precision issues inhereted in binary representation of decimals in JavaScript that can lead to unexpected results like `0.89...` and `false` in this example.
 
 *Question 6*
+What do you think the following code will output?
+
+```js
+let nanArray = [NaN];
+
+console.log(nanArray[0] === NaN);
+```
+
+Bonus:
+
+How can you reliably test if a value is NaN?
+
+*Answer 6*
+The code above will outpute `false` because NaN is a special numeric value and you can't use, and it can't be compared using == or === operators. In order to test if a value is NaN, we can use `Number.isNaN()` method.
+
+```js
+console.log(isNaN(nanArray[0])); // true
+```
 
 *Question 7*
 What is the output of the following code?
