@@ -122,3 +122,80 @@ console.log(answer - 8);
 
 *Answer 7*
 The code above will output 34. The last line logs the global `answer` variable which is also used as argument for the `messWithIt` function, but since the value is primitive, it's passed by value e.g. the function receives a copy of it, and the original value remains unmutated.
+
+*Question 8*
+One day, Spot was playing with the Munster family's home computer, and he wrote a small program to mess with their demographic data:
+
+```js
+let munsters = {
+  Herman: { age: 32, gender: "male" },
+  Lily: { age: 30, gender: "female" },
+  Grandpa: { age: 402, gender: "male" },
+  Eddie: { age: 10, gender: "male" },
+  Marilyn: { age: 23, gender: "female" },
+};
+
+function messWithDemographics(demoObject) {
+  Object.values(demoObject).forEach(familyMember => {
+    familyMember["age"] += 42;
+    familyMember["gender"] = "other";
+  });
+}
+```
+
+After writing this function, he typed the following code:
+
+```js
+messWithDemographics(munsters);
+```
+
+Before Grandpa could stop him, Spot hit the Enter key with his tail. Did the family's data get ransacked? Why or why not?
+
+*Answer 8*
+Yes, the munsters family data is mutated forever because Spot modfied the object's values (nested objects in this case) instead of reassigning it to a new object in the function scope. This is in place mutation and is reflected in the original object hence mutated family data.
+
+*Question 9*
+Function and method calls can take expressions as arguments. Suppose we define a function named rps as follows, which follows the classic rules of the rock-paper-scissors game, but with a slight twist: in the event of a tie, it just returns the choice made by both players.
+
+```js
+function rps(fist1, fist2) {
+  if (fist1 === "rock") {
+    return fist2 === "paper" ? "paper" : "rock";
+  } else if (fist1 === "paper") {
+    return fist2 === "scissors" ? "scissors" : "paper";
+  } else {
+    return fist2 === "rock" ? "rock" : "scissors";
+  }
+}
+```
+
+What does the following code output?
+
+```js
+console.log(rps(rps(rps("rock", "paper"), rps("rock", "scissors")), "rock"));
+```
+
+*Answer 9*
+The code above outputs "paper".
+
+*Question 10*
+Consider these two simple functions:
+
+```js
+function foo(param = "no") {
+  return "yes";
+}
+
+function bar(param = "no") {
+  return param === "no" ? "yes" : "no";
+}
+```
+
+What will the following function invocation return?
+
+```js
+bar(foo());
+```
+
+*Answer 10*
+The function invocation with first go to the `foo()` function, and return yes. It will then invoke the `bar()` function, and pass the return value `yes` of the `foo()` function to the `bar()` function as argument. `param` at this point is holding `yes` as it's value where the strict equality operator checks if `yes` is equal to `no` which is false, and therefore the ternary operator will return `no`.
