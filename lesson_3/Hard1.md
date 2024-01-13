@@ -119,3 +119,26 @@ two is: ["three"]
 three is: ["one"]
 
 That's because we are using the mutative `splice` method to remove initially provided values, and add new ones. The reasons this is mutation is reflecting in the original arrays is because of the pass by reference method JavaScript adopts for object values.
+
+*Question 4*
+Can you identify all of the variables, primitive values, and objects in the following code?
+
+```js
+function boo(scare) {
+  let myBoo = scare.toUpperCase() + "!!!";
+  console.log(myBoo);
+}
+
+const halloweenCollection = {
+  greet: "Happy Halloween",
+  scare: "Boo",
+  wish: "May all your pumpkins be glowing",
+};
+
+let myBoo = boo(halloweenCollection["greet"]);
+```
+
+*Answer 4*
+Variables: boo, scare, myBoo (local var), halloweenCollection, and myBoo.
+Objects: boo function, toUpperCase(), console, halloweenCollection
+Primitive values: "111", object properties 6x, "greet" 2x, HAPPY HALLOWEEN!!! 2x, and undefined (function's return value).
