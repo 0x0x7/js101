@@ -1,8 +1,5 @@
-const numbers = [1, 2, 3, 4, 5];
-function modify(param) {
-  param += [1];
-  return param;
+function say() {
+  console.log(arguments[0]);
 }
 
-console.log(modify(numbers));
-console.log(numbers);
+say("hello, world");
