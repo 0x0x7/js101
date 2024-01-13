@@ -36,3 +36,86 @@ console.log(object);
 
 *Answer 2*
 The last line `console.log(object);` in the code above will output the `first` property of the `object` object that contains an array of two elements: `{first: [1, 2]}` because we used the mutative `push()` method to add `2` to the end of the `numArray` which is holding a reference to the `object` object's value hence mutating the original value in place.
+
+*Question 3*
+Given the following similar sets of code, what will each code snippet print?
+
+A)
+
+```js
+function messWithVars(one, two, three) {
+  one = two;
+  two = three;
+  three = one;
+}
+
+let one = ["one"];
+let two = ["two"];
+let three = ["three"];
+
+messWithVars(one, two, three);
+
+console.log(`one is: ${one}`);
+console.log(`two is: ${two}`);
+console.log(`three is: ${three}`);
+```
+
+B)
+```js
+function messWithVars(one, two, three) {
+  one = ["two"];
+  two = ["three"];
+  three = ["one"];
+}
+
+let one = ["one"];
+let two = ["two"];
+let three = ["three"];
+
+messWithVars(one, two, three);
+
+console.log(`one is: ${one}`);
+console.log(`two is: ${two}`);
+console.log(`three is: ${three}`);
+```
+
+C)
+```js
+function messWithVars(one, two, three) {
+  one.splice(0, 1, "two");
+  two.splice(0, 1, "three");
+  three.splice(0, 1, "one");
+}
+
+let one = ["one"];
+let two = ["two"];
+let three = ["three"];
+
+messWithVars(one, two, three);
+
+console.log(`one is: ${one}`);
+console.log(`two is: ${two}`);
+console.log(`three is: ${three}`);
+```
+
+*Answer 3*
+A) will output:
+one is: ["one"]
+two is: ["two"]
+three is: ["three"]
+
+That's because variable shadowing is in play, and only the global variables' values are in play.
+
+B) will output:
+one is: ["one"]
+two is: ["two"]
+three is: ["three"]
+
+That's for the same reasons as A.
+
+C) will output:
+one is: ["two"]
+two is: ["three"]
+three is: ["one"]
+
+That's because we are using the mutative `splice` method to remove initially provided values, and add new ones. The reasons this is mutation is reflecting in the original arrays is because of the pass by reference method JavaScript adopts for object values.
